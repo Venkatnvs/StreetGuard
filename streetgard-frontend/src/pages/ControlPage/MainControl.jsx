@@ -2,8 +2,8 @@ import PageContainer from '@/components/layout/PageContainer';
 import HeaderWithButton from '@/components/PageHeaders/HeaderWithButton';
 import { Plus } from 'lucide-react';
 import React from 'react';
-import StreetGardList from './components/streetGardList';
 import { useNavigate } from 'react-router-dom';
+import StreetGardList from './components/StreetGardList';
 
 const MainControl = () => {
   const navigate = useNavigate();

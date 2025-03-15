@@ -174,7 +174,7 @@ const MapDisplay = () => {
     }
     
     return (
-        <div className="flex-col z-10 w-full h-full rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+        <div className="flex-col -z-1 w-full h-full rounded-lg overflow-hidden border border-gray-200 shadow-sm">
             <MapContainer
                 zoom={5} 
                 className="h-full w-full" 

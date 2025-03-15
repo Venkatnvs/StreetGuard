@@ -7,7 +7,9 @@ const Home = () => {
   return (
     <PageContainer scrollable>
       <TextHeader title='All Street Guard' description='Overview of all Street Guard' />
-      <MapDisplay />
+      <div style={{ position: 'relative', zIndex: 0 }}>
+        <MapDisplay />
+      </div>
     </PageContainer>
   )
 };

@@ -29,8 +29,8 @@ const Sidebar = ({ className }) => {
         <img
           src={isMinimized ? MainLogo : MainLogo}
           alt='Logo'
-          className={cn('mr-2 w-8 h-8'
-            , isMinimized && 'w-10 h-8')}
+          className={cn('mr-2 w-12 h-16'
+            , isMinimized && 'w-12 h-10')}
         />
         {
           !isMinimized && (

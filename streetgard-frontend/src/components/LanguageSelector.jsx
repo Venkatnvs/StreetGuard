@@ -30,14 +30,14 @@ export default function LanguageSelector({selectLanguage, selectedLanguage}) {
   const currentLanguage = availableLanguages.find(lang => lang.code === selectedLanguage);
 
   return (
-    <div className="fixed bottom-[40px] md:bottom-[30px] left-0 transform translate-x-0 translate-y-[50%] z-50"> {/* Ensure higher z-index */}
+    <div className="fixed top-[70px] md:top-[50px] right-0 transform translate-x-0 translate-y-[50%] z-50"> {/* Ensure higher z-index */}
       <div className="group relative w-[40px] h-[40px]">
         <DropdownMenu style={{ translate: 'none' }} translate="no" className="notranslate">
           <DropdownMenuTrigger asChild style={{ translate: 'none' }} translate="no" className="notranslate">
             <Button
               variant="outline"
               size="sm"
-              className="shadow-sm h-full w-full cursor-pointer p-1 md:h-full md:w-full relative z-40 border border-primary border-r-0 rounded-r-full"
+              className="shadow-sm h-full w-full cursor-pointer p-1 md:h-full md:w-full relative z-40 border border-primary border-l-0 rounded-l-full"
               key={selectedLanguage}
             >
               <GlobeIcon className="h-5 w-5 text-foreground" />

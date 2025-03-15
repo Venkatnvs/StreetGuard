@@ -13,7 +13,7 @@ const Header = () => {
           <MobileSidebar />
           <Link to={'/'}>
             <div className='flex flex-row items-center space-x-0 space-y-0 cursor-pointer'>
-              <img src={MainLogo} alt='Logo' className={cn('mr-1 w-8 h-6')} />
+              <img src={MainLogo} alt='Logo' className={cn('mr-1 w-8 h-8')} />
               {
                 <h2 className='text-xl font-semibold text-pretty text-primary font-oswald'>
                   {SITE_NAME}

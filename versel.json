@@ -25,7 +25,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "streetgard_backend/wsgi.py"
+        "dest": "streetgard_backend/streetgard_backend/wsgi.py"
       }
     ]
   }

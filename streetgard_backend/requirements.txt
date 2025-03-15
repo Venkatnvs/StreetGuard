@@ -3,3 +3,8 @@ django-cors-headers
 djangorestframework
 drf-yasg
 pillow
+django-decouple
+dj-database-url
+whitenoise
+psycopg2-binary
+gunicorn

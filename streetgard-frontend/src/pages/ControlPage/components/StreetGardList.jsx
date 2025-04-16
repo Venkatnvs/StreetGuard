@@ -200,14 +200,14 @@ const StreetGardList = () => {
       <Dialog open={openModal} onOpenChange={setOpenModal}>
         {selectedRecord && (
           <DialogContent className="min-w-[90vw] md:w-[90vw] w-[95vw] overflow-hidden max-h-[95vh] h-full p-0">
-            <div className="sticky top-0 z-20 bg-background p-4 md:p-6 border-b">
-              <DialogHeader>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <div className="sticky top-0 z-20 bg-background p-1 md:p-2 border-b pb-0 mb-0">
+              <DialogHeader className="p-0">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 pb-0">
                   <div>
                     <DialogTitle className="text-xl md:text-2xl">{selectedRecord.name}</DialogTitle>
                     <DialogDescription className="text-sm">
                       Device data recorded on {formatDate(latestData?.created_time)}
-                    </DialogDescription>
+                    </DialogDescription> 
                   </div>
                   <Badge 
                     variant={latestData?.bulb_state ? "success" : "secondary"} 
@@ -219,9 +219,9 @@ const StreetGardList = () => {
               </DialogHeader>
             </div>
             
-            <div className="overflow-y-auto max-h-[calc(90vh-250px)]">
+            <div className="overflow-y-auto max-h-[calc(90vh-100px)]">
               <Tabs defaultValue="sensors" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-                <div className="sticky top-0 z-10 bg-background px-3 md:px-4 pt-3 pb-2">
+                <div className="sticky top-0 z-10 bg-background px-3 md:px-4 py-0">
                   <div className="overflow-x-auto no-scrollbar">
                     <TabsList className="inline-flex w-auto min-w-full gap-4">
                       <TabsTrigger value="sensors" className="flex items-center gap-1 md:gap-2 text-xs md:text-sm whitespace-nowrap">
@@ -249,7 +249,7 @@ const StreetGardList = () => {
                 </div>
                 
                 <div className="px-3 md:px-4 pb-3">
-                  <TabsContent value="sensors" className="mt-2">
+                  <TabsContent value="sensors" className="mt-0">
                     {fetchingLatest ? (
                       <div className="flex flex-col justify-center items-center h-64">
                         <div className="animate-spin mb-4">
@@ -452,7 +452,7 @@ const StreetGardList = () => {
                     )}
                   </TabsContent>
                   
-                  <TabsContent value="device_control" className="mt-2">
+                  <TabsContent value="device_control" className="mt-0">
                     <Card>
                       <CardContent className="space-y-6 p-3 md:p-6">
                         <div className="space-y-4">
@@ -604,7 +604,7 @@ const StreetGardList = () => {
                     </Card>
                   </TabsContent>
                   
-                  <TabsContent value="info" className="mt-2">
+                  <TabsContent value="info" className="mt-0">
                     <Card>
                       <CardHeader>
                         <CardTitle>Device Information</CardTitle>
@@ -667,7 +667,7 @@ const StreetGardList = () => {
                     </Card>
                   </TabsContent>
 
-                  <TabsContent value="camera" className="mt-2">
+                  <TabsContent value="camera" className="mt-0">
                     <Card>
                       <CardHeader>
                         <CardTitle>Live Camera Feed</CardTitle>
@@ -709,9 +709,9 @@ const StreetGardList = () => {
                     </Card>
                   </TabsContent>
 
-                  <TabsContent value="analysis" className="mt-2">
-                    <Card>
-                      <CardContent className="px-4">
+                  <TabsContent value="analysis" className="mt-0">
+                    <Card className="py-0 pt-2">
+                      <CardContent className="px-4 py-0">
                         <Analysis 
                           id={selectedRecord.id}
                         />
@@ -722,7 +722,7 @@ const StreetGardList = () => {
               </Tabs>
             </div>
             
-            <div className="sticky bottom-0 z-20 bg-background border-t p-3 md:p-4 flex flex-col md:flex-row justify-between items-center gap-2">
+            <div className="sticky bottom-0 z-20 bg-background border-t p-3 md:p-2 flex flex-col md:flex-row justify-between items-center gap-1">
               <Button variant="outline" onClick={() => setOpenModal(false)} className="w-full md:w-auto">Close</Button>
               <div className="flex items-center gap-2 w-full md:w-auto justify-end">
                 <span className="text-xs md:text-sm text-muted-foreground hidden md:inline">

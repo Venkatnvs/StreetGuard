@@ -92,7 +92,7 @@ const Analysis = ({ id }) => {
 
     return (
         <div className="w-full p-0">
-            <Tabs defaultValue="temperature">
+            <Tabs defaultValue="temperature" className="pt-0">
                 <div className="overflow-x-auto no-scrollbar">
                     <TabsList className="inline-flex w-auto min-w-full">
                         <TabsTrigger value="temperature" className="text-xs md:text-sm whitespace-nowrap">Temperature</TabsTrigger>
@@ -102,9 +102,9 @@ const Analysis = ({ id }) => {
                     </TabsList>
                 </div>
 
-                <TabsContent value="temperature" className="space-y-4 mt-4">
+                <TabsContent value="temperature" className="space-y-4 mt-0 mb-0">
                     <Card className="overflow-hidden">
-                        <CardHeader className="p-3">
+                        <CardHeader className="p-3 py-0">
                             <CardTitle className="text-sm md:text-base">Temperature Readings</CardTitle>
                             <CardDescription className="text-xs">
                                 DHT and BMP temperature sensors
@@ -250,7 +250,7 @@ const Analysis = ({ id }) => {
                                 Binary sensor states
                             </CardDescription>
                         </CardHeader>
-                        <CardContent className="p-0 pb-2">
+                        <CardContent className="p-0 pb-2 pl-4">
                             <div className="w-full h-[180px] md:h-[220px]">
                                 <ResponsiveContainer width="100%" height="100%">
                                     <BarChart data={data} {...chartProps}>

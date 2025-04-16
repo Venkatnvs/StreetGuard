@@ -674,10 +674,10 @@ const StreetGardList = () => {
                         <CardDescription>Real-time view from your Street Guard device</CardDescription>
                       </CardHeader>
                       <CardContent>
-                        {"https://streamsync-7yp3.onrender.com/live/c76ae9ba" ? (
+                        {"https://streamsync-7yp3.onrender.com/live/f5bf7441" ? (
                           <div className="relative rounded-lg overflow-hidden h-90">
                             <img 
-                              src="https://streamsync-7yp3.onrender.com/live/c76ae9ba" 
+                              src="https://streamsync-7yp3.onrender.com/live/f5bf7441" 
                               alt="Live camera feed" 
                               className="w-full h-full object-cover rounded-lg" 
                             />
